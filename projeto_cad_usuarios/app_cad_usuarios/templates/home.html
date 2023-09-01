@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <form action="{% url 'listagem_usuarios' %}" method="post">
+        {% csrf_token %}
+        <div class="container mt-5">
+            <div class="container-fluid">
+                <p>Nome</p><input class="form-control-sm" type="text" name="nome">
+            </div>
+            <div class="container">
+                <p>Idade</p> <input class="form-control-sm" type="text" name="idade">
+            </div>
+            <button class="btn btn-primary mt-5">Enviar</button>
+        </div>
+    </form>
+{% endblock %}
